@@ -12,6 +12,9 @@ class KittensController < ApplicationController
 
   # GET /kittens/1 or /kittens/1.json
   def show
+    respond_to do |format|
+      format.json { render json: @kitten }
+    end
   end
 
   # GET /kittens/new
